@@ -1,0 +1,61 @@
+body {
+  background: transparent;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+#overlay-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#menu {
+  background: rgba(0,0,0,0.6);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+#player-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+#portrait {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+#stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.stat {
+  font-size: 36px;
+  font-weight: bold;
+  animation: neon-pulse 1.5s infinite alternate;
+}
+.stat-vida {
+  color: #FF0000;
+  text-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 20px #FF0000, 0 0 40px #FF0000;
+}
+.stat-sanidade {
+  color: #00FFFF;
+  text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 40px #00FFFF;
+}
+.stat-pe {
+  font-size: 16px;
+  color: white;
+  text-shadow: none;
+}
+@keyframes neon-pulse {
+  0% { text-shadow: 0 0 5px currentColor,0 0 10px currentColor,0 0 20px currentColor,0 0 40px currentColor;}
+  50% { text-shadow: 0 0 10px currentColor,0 0 20px currentColor,0 0 40px currentColor,0 0 60px currentColor;}
+  100% { text-shadow: 0 0 5px currentColor,0 0 10px currentColor,0 0 20px currentColor,0 0 40px currentColor;}
+}

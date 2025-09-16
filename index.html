@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Overlay RPG Ordem Paranormal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="overlay-container">
+    <div id="menu">
+      <h2>Selecionar Perfil</h2>
+      <select id="player-select">
+        <option value="0">Jogador 1</option>
+        <option value="1">Jogador 2</option>
+        <option value="2">Jogador 3</option>
+        <option value="3">Jogador 4</option>
+        <option value="4">Jogador 5</option>
+      </select>
+      <input type="file" id="portrait-upload" accept="image/png">
+      <div id="config-buttons">
+        <button onclick="changeStat('vida', 1)">+ Vida</button>
+        <button onclick="changeStat('vida', -1)">- Vida</button>
+        <button onclick="changeStat('sanidade', 1)">+ Sanidade</button>
+        <button onclick="changeStat('sanidade', -1)">- Sanidade</button>
+        <button onclick="changeStat('pe', 1)">+ PE</button>
+        <button onclick="changeStat('pe', -1)">- PE</button>
+      </div>
+    </div>
+    <div id="player-display">
+      <img id="portrait" src="default.png" alt="Portrait">
+      <div id="stats">
+        <div class="stat stat-vida"><span>Vida:</span> <span id="vida">10</span></div>
+        <div class="stat stat-sanidade"><span>Sanidade:</span> <span id="sanidade">5</span></div>
+        <div class="stat-pe"><span>PE:</span> <span id="pe">2</span></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
